@@ -1,0 +1,239 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background:#a6e6bf;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+h1{
+    font-family: "Oooh Baby", cursive;
+    font-weight: 800;
+    font-style: normal;
+    color: #2980B9;
+    font-size: 36px; /* Tamaño inicial del texto */
+    animation: animarTexto 4s infinite ease-in-out; /* Asigna la animación */
+}
+
+/* Definición de la animación */
+@keyframes animarTexto {
+    0% {
+        color: #2980B9; /* Color original */
+        font-size: 36px; /* Tamaño original */
+        transform: translateY(0); /* Posición original */
+    }
+
+    25% {
+        color: #FF5733; /* Cambio de color */
+        font-size: 40px; /* Aumenta de tamaño */
+        transform: translateY(-10px); /* Se mueve ligeramente hacia arriba */
+    }
+
+    50% {
+        color: #FFC300; /* Otro cambio de color */
+        font-size: 44px; /* Más grande */
+        transform: translateY(10px); /* Mueve hacia abajo */
+    }
+
+    75% {
+        color: #27AE60; /* Nuevo color */
+        font-size: 38px; /* Vuelve a ser más pequeño */
+        transform: translateY(-5px); /* Pequeño ajuste hacia arriba */
+    }
+
+    100% {
+        color: #2980B9; /* Vuelve al color original */
+        font-size: 36px; /* Tamaño original */
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
+
+}
+.titulo{
+    font-size: 36px;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 24px;
+    font-family: "Oooh Baby";
+    font-weight: 700;
+    font-style: normal;
+    color: #2C3E50;
+    line-height: 1.6;
+}
+
+p span {
+    font-size: 36px; /* Tamaño mayor para resaltar el nombre */
+    color: #FF5733; /* Color cálido y destacado */
+    font-weight: bold;
+    animation: pulse 1.5s infinite; /* Añade una animación para atraer la atención */
+}
+
+.invitation {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px auto;
+    padding: 2px;
+    background: #FFF9C4;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);  
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+/* Animación para el span (nombre del bebé) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #FF5733;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #FFC300; /* Cambio de color en la animación */
+    }
+
+    75%{
+        transform: scale(1.5);
+        color: #98ca7b; 
+    }
+    100% {
+        transform: scale(1);
+        color: #FF5733;
+    }
+}
+
+
+/*globos*/
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 100px;
+    height: 150px;
+    background-color: #ffccff;
+    border-radius: 50%;
+    animation: floatUp 10s infinite;
+}
+
+.balloon:nth-child(1) {
+    background-color: #f00f0f;
+    left: 1%;
+    animation-duration: 2s;
+}
+
+.balloon:nth-child(2) {
+    background-color: #ccffff;
+    left: 5%;
+    animation-duration: 4s;
+}
+
+.balloon:nth-child(3) {
+    background-color: #15b8d4;
+    left: 20%;
+    animation-duration: 5s;
+}
+
+.balloon:nth-child(4) {
+    background-color: #ffcc99;
+    left: 40%;
+    animation-duration: 6.5s;
+}
+
+.balloon:nth-child(5) {
+    background-color: #f07d5b;
+    left: 50%;
+    animation-duration: 8s;
+}
+
+.balloon:nth-child(6) {
+    background-color: rgba(194, 96, 109, 0.644);
+    left: 35%;
+    animation-duration: 11s;
+}
+
+.balloon:nth-child(7) {
+    background-color: #eee240;
+    left: 65%;
+    animation-duration: 7s;
+}
+
+.balloon:nth-child(8) {
+    background-color: #ccccff;
+    left: 70%;
+    animation-duration: 9s;
+}
+
+@keyframes floatUp {
+    0% {
+        bottom: -1px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+.gif-container {
+    margin: 20px auto;
+    max-width: 80%; /* Ajusta el ancho máximo del GIF */
+    display: flex;
+    justify-content: center; /* Centra el GIF */
+}
+
+.gif-container img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button{
+    background-color: #27AE60;
+    font-size: 25px;
+    border-radius: 10px;
+    color:white;
+    border: none;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Espaciado alrededor del texto */
+    position: static; /* Asegura que esté en el flujo del documento */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    bottom: 0;
+    font-size: 25px; /* Ajusta el tamaño de la fuente */
+}
+
+footer p {
+    color: #2980B9;
+    align-items: center;
+    margin: 0; /* Elimina el margen para evitar espacio adicional */
+    padding: 1px;
+}
